@@ -1,0 +1,32 @@
+<div class="m-auto text-center">
+    <a class="button btn btn-success m-2 p-2" routerLink="/home/students/add">ADD Student</a>    
+</div>
+
+
+<table class="table table-borderd table-striped text-center">
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Dept. Name</th>
+        <th colspan="1">Operation</th>
+    </thead>
+    <tbody>
+        <tr  *ngFor="let std of students  | slice:limit:limit+9; let _index=index">
+            <td>{{std._id}}</td>
+            <td>{{std.Name}}</td>
+            <td>{{std.Email}}</td>
+            <td>{{std.Department}}</td>
+            <td>
+                <button class="button btn btn-primary mr-4" routerLink="/home/students/details/{{std._id}}">Details</button>
+                <button class="button btn btn-warning mr-4 text-white bold" routerLink="/home/students/edit/{{std._id}}">Edit</button>
+                <button class="button btn btn-danger "  (click)="delFnc(std._id);" routerLink="/home/students/delete/{{std._id}}">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="text-center mt-3">
+    <button class="btn btn-info  m-3"style="font-size:1rem;"(click)="getPrev()"><b> << </b></button>
+    <button class="btn btn-info  m-3" style="font-size:1rem;" (click)="getNext()"><b> >> </b></button>
+</div>
+

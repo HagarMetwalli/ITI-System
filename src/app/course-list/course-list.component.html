@@ -1,0 +1,28 @@
+<div class="m-auto text-center">
+    <a class="button btn btn-success m-2 p-2" routerLink="/home/courses/add">ADD Course</a>    
+</div>
+
+
+<table class="table table-borderd table-striped text-center w-50 m-auto">
+    <thead>
+        <th>ID</th>
+        <th>Course Name</th>
+        <th colspan="1">Operation</th>
+    </thead>
+    <tbody>
+        <tr  *ngFor="let cs of courses  | slice:limit:limit+9; let _index=index">
+            <td>{{cs._id}}</td>
+            <td>{{cs.Name}}</td>
+            <td>
+                <button class="button btn btn-primary mr-4" routerLink="/home/courses/details/{{cs._id}}">Details</button>
+                <button class="button btn btn-warning mr-4 text-white bold" routerLink="/home/courses/edit/{{cs._id}}">Edit</button>
+                <button class="button btn btn-danger "  (click)="delFnc(cs._id);" routerLink="/home/courses/delete/{{cs._id}}">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="text-center mt-3">
+    <button class="btn btn-info  m-3"style="font-size:1rem;"(click)="getPrev()"><b> << </b></button>
+    <button class="btn btn-info  m-3" style="font-size:1rem;" (click)="getNext()"><b> >> </b></button>
+</div>
+

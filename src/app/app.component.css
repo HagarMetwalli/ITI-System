@@ -1,0 +1,13 @@
+
+
+button{
+    font-size:1.5rem;
+}
+
+a{
+    color:white !important;
+    margin:0.3% 2%;
+}
+a:active{
+    color:rgb(136, 136, 207) !important;
+}

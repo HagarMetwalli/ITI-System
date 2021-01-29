@@ -1,0 +1,28 @@
+<div class="m-auto text-center">
+    <a class="button btn btn-success m-2 p-2" routerLink="/home/deparments/add">ADD Department </a>    
+</div>
+
+
+<table class="table table-borderd table-striped text-center w-50 m-auto">
+    <thead>
+        <th>ID</th>
+        <th>Dept. Name</th>
+        <th colspan="1">Operation</th>
+    </thead>
+    <tbody>
+        <tr  *ngFor="let dept of departments  | slice:limit:limit+9; let _index=index">
+            <td>{{dept._id}}</td>
+            <td>{{dept.Name}}</td>
+            <td>
+                <button class="button btn btn-primary mr-4" routerLink="/home/deparments/details/{{dept._id}}">Details</button>
+                <button class="button btn btn-warning mr-4 text-white bold" routerLink="/home/deparments/edit/{{dept._id}}">Edit</button>
+                <button class="button btn btn-danger "  (click)="delFnc(dept._id);" routerLink="/home/deparments/delete/{{dept._id}}">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="text-center mt-3">
+    <button class="btn btn-info  m-3"style="font-size:1rem;"(click)="getPrev()"><b> << </b></button>
+    <button class="btn btn-info  m-3" style="font-size:1rem;" (click)="getNext()"><b> >> </b></button>
+</div>
+

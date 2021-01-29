@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="text-danger mb-3 text-center" *ngIf="flag" style="font-size:1.8rem;">Invalid Name Please enter Name</div>
+      <form class="m-auto p-5">
+        <div class="form-group row">
+          <label for="colFormLabelLg" class="col-sm-0 col-form-label col-form-label-lg m-auto">Dept. Name</label>
+          <input type="text" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Enter Dept. Name"
+          [(ngModel)]="editDept.Name"[ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="col-sm-offset-2 col-sm-8 text-center row m-auto">
+          <button type="submit" class="btn btn-success col" (click)="editSubmit()" routerLinkActive="router-link-active" >Submit</button>
+        </div>
+      </form>
+    </div>
+    
