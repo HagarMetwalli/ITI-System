@@ -24,12 +24,12 @@ export class StudentService {
   constructor(private http:HttpClient) { }
   public flag:any;
   items = [];
-  newStd:Student=new Student(1,'','','');
-  editStdSer:Student=new Student(1,'','','');
+  newStd:Student=new Student(1,'','','','');
+  editStdSer:Student=new Student(1,'','','','');
 
    //check null
    public checkNull(std:Student){
-     if(((std.Name)&&(std.Email))&&(std.Department)||((std._id)&&(std.Name)&&(std.Email)&&(std.Department))){
+     if(((std.Name)&&(std.Email))&&(std.Department)&&(std.Course)||((std._id)&&(std.Name)&&(std.Email)&&(std.Department)&&(std.Course))){
        return true;
      }
      else{

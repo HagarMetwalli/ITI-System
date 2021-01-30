@@ -16,6 +16,11 @@
         <input type="text" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Enter Dept. Name"
         [(ngModel)]="editStd.Department"[ngModelOptions]="{standalone: true}">
       </div>
+      <div class="form-group row">
+        <label for="colFormLabelLg" class="col-sm-0 col-form-label col-form-label-lg m-auto">Course Name</label>
+        <input type="text" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Enter Course Name"
+        [(ngModel)]="editStd.Course"[ngModelOptions]="{standalone: true}">
+      </div>
       <div class="col-sm-offset-2 col-sm-8 text-center row m-auto">
         <button type="submit" class="btn btn-success col" (click)="editSubmit()" routerLinkActive="router-link-active" >Submit</button>
       </div>

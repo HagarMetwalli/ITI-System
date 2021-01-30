@@ -18,28 +18,13 @@ export class StudentListComponent implements OnInit {
      
     })
   }
+    //Pagenation
+  itemsCount: number = 7;
+  p!: number;
   
-  public flag:any;
-  //Pagenation
-  public pages:number=0;
-  public currentPage:number=1;
-  public limit:number=0;
-  public getNext(){
-    this.pages=Math.ceil(this.students.length/9);
-    if(this.currentPage<this.pages){
-      this.limit+=9;
-      this.currentPage++;
-    }
-  }
-  public getPrev(){
-    if(this.currentPage>1){
-      this.limit-=9;
-      this.currentPage--;
-    }
-  }
-  //end paggination
+  public flag:any;  
   items = [];
-  newStd:Student=new Student(0,'','','');
+  newStd:Student=new Student(0,'','','','');
 
 public delFnc(stdID:Number){
   console.log(stdID)

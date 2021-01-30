@@ -18,24 +18,10 @@ export class DepartmentListComponent implements OnInit {
     })
   }
   public flag:any;
+
   //Pagenation
-  public pages:number=0;
-  public currentPage:number=1;
-  public limit:number=0;
-  public getNext(){
-    this.pages=Math.ceil(this.departments.length/9);
-    if(this.currentPage<this.pages){
-      this.limit+=9;
-      this.currentPage++;
-    }
-  }
-  public getPrev(){
-    if(this.currentPage>1){
-      this.limit-=9;
-      this.currentPage--;
-    }
-  }
-  //end paggination
+  itemsCount: number = 7;
+  p!: number;
   items = [];
   newDept:Department=new Department(0,'');
 

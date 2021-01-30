@@ -20,24 +20,10 @@ export class CourseListComponent implements OnInit {
     })
   }
     public flag:any;
-    //Pagenation
-    public pages:number=0;
-    public currentPage:number=1;
-    public limit:number=0;
-    public getNext(){
-      this.pages=Math.ceil(this.courses.length/9);
-      if(this.currentPage<this.pages){
-        this.limit+=9;
-        this.currentPage++;
-      }
-    }
-    public getPrev(){
-      if(this.currentPage>1){
-        this.limit-=9;
-        this.currentPage--;
-      }
-    }
-      //end paggination
+   //Pagenation
+    itemsCount: number = 7;
+    p!: number;
+   //end paggination
   items = [];
   newCS:Course=new Course(0,'');
 

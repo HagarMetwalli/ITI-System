@@ -12,7 +12,7 @@ export class AddStudentComponent implements OnInit {
   
   flag:boolean=false;
   constructor(private StudentService:StudentService,private router:Router ) { }
-  public newStd:Student=new Student(1,"","","");
+  public newStd:Student=new Student(1,'','','','');
   public addSubmit(){
     if(this.StudentService.checkNull(this.newStd))
      {
@@ -34,6 +34,7 @@ export class AddStudentComponent implements OnInit {
         this.newStd.Name='';
         this.newStd.Email='' ;
         this.newStd.Department='' ;
+        this.newStd.Course='' ;
       }  
     }
   ngOnInit(): void {

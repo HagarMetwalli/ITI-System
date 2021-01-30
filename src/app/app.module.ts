@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import {HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-//import {NgxPaginationModule} from 'ngx-pagination';
+import {NgxPaginationModule} from 'ngx-pagination';
 import { StudentListComponent } from './student-list/student-list.component';
 import { AddStudentComponent } from './add-student/add-student.component';
 import { EditStudentComponent } from './edit-student/edit-student.component';
@@ -40,7 +40,7 @@ import { EditCourseComponent } from './edit-course/edit-course.component';
   ],
   imports: [
     BrowserModule,
-    //NgxPaginationModule,
+    NgxPaginationModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule

@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-student.component.css']
 })
 export class EditStudentComponent implements OnInit {
-  public editStd :Student=new Student(1,'','','');
+  public editStd :Student=new Student(1,'','','','');
   constructor(private StudentService:StudentService , private router:Router, public ar : ActivatedRoute ) {}
   public idParam=0;
   ngOnInit(): void {
@@ -40,5 +40,6 @@ export class EditStudentComponent implements OnInit {
     this.editStd.Name='';
     this.editStd.Email='';
     this.editStd.Department='';
+    this.editStd.Course='' ;
   }
 }

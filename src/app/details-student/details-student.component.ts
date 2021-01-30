@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./details-student.component.css']
 })
 export class DetailsStudentComponent implements OnInit {
-  std : Student=new Student(0,"","","")
+  std : Student=new Student(0,"","","","")
   constructor(public StudentService:StudentService , public ar : ActivatedRoute) { }
   ngOnInit(): void {
     let idParam=0;
